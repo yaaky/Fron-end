@@ -1,5 +1,5 @@
 import React from 'react'
-import Regi from '../components/regi'
+import Regi from '../components/Regi'
 function Registro() {
   return (
     <div>

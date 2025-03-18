@@ -1,0 +1,136 @@
+.cont{
+    display: contents;
+    max-width: 70%; 
+    margin: 0 auto;
+
+ 
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97%;
+    margin: auto;
+    background-color: darksalmon;
+    color:  rgb(82, 40, 10);
+    font-style: italic;
+    padding: 10px 50px;
+    
+}
+
+
+
+.header img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.menu{
+    margin: auto;
+    padding: 10px;
+    background-color: darksalmon;
+  
+}
+
+.menu ul {
+    margin: auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 70%; 
+    font-style: italic;
+    
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(65, 30, 4);
+
+}
+/* .contenedor{
+    border: solid red ;
+    display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px auto;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+
+} */
+
+.contenedor{
+    width: 95%;
+    margin: 30px  auto;
+    display: grid;
+    grid-template-areas: 'a a a a';
+    /* grid-auto-rows: 20%;
+    grid-auto-columns: 20%; */
+    
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.contenedor img{
+
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+.contenedor button{
+    display: flex;
+    background-color: powderblue;
+    border-radius: 20px;
+   margin: 3px;
+}
+
+
+
+.itemCard {
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #efe7dd ;
+
+}
+
+.itemCard button {
+    width: 50%;
+    height: 11%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border: none;
+}
+.itemCard button:hover{
+    background-color: skyblue;
+    box-shadow: 0 0 15px rgb(16, 125, 209);
+}
+#prueba{
+    display: block;
+    margin: auto;
+    width: 85%;
+   
+
+}
+
+
+.carousel-item img{
+    height: 600px;
+    
+    
+
+} 
+
+.carousel-inner {
+    width: 80%;
+   
+}

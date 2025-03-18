@@ -43,9 +43,10 @@ function password(evento) {
 }
 
 function validar () {
-    const encontrado = usuario.filter (usuario => usuario.nombre === nombreUsuario && usuario.password===passwordUsuario)
-    if(encontrado.length == 0){
+    const encontrado = usuario.find (usuario => usuario.nombre === nombreUsuario && usuario.password===passwordUsuario)
+    if(encontrado.tipuser == "admin"){
         console.log("usuario o contraseña incorrectas")
+        navigate('/admin')
     }else{
         localStorage.setItem("Usuario",JSON.stringify(nombreUsuario));
         
@@ -62,7 +63,7 @@ function validar () {
      <input type="text"  value={nombreUsuario} onChange={nombre}/><br /><br />
      <label htmlFor="">Contraseña: </label>
      <input type="text" value={passwordUsuario} onChange={password}/><br /><br />
-     <p> ¿No tines una Cuenta? <Link to="/register" className='btnCambiar'>Registrarme</Link></p>
+     <p> ¿No tines una Cuenta? <Link to="/registro" className='btnCambiar'>Registrate</Link></p>
      <button onClick={validar}>Push</button>
      </div>
 

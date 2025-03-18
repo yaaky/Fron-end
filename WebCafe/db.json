@@ -4,9 +4,23 @@
       "id": "f0d3",
       "nombre": "Steven",
       "email": "steven@gamil",
-      "password": "123"
+      "password": "123",
+      "tipuser": "admin"
+    },
+    {
+      "id": "6e02",
+      "nombre": "jostin",
+      "email": "jos@gmail.com",
+      "password": "124",
+      "tipuser": "user"
+    },
+    {
+      "id": "0d95",
+      "nombre": "j",
+      "email": "j@gmail.com",
+      "password": "1245",
+      "tipuser": "user"
     }
-
   ],
   "tasks": []
 }

@@ -23,7 +23,7 @@ function password(evento) {
 
 
 function cargar() {
-   llamados.PostUsers(nombreUsuario, emailUsuario,passwordUsuario)
+   llamados.PostUsers(nombreUsuario, emailUsuario,passwordUsuario, "user")
 }
   return (
     <div>
@@ -36,7 +36,7 @@ function cargar() {
      <input type="text" value={emailUsuario} onChange={email} /><br /><br />
      <label htmlFor="">Contraseña: </label>
      <input type="text" value={passwordUsuario} onChange={password}/><br /><br />
-     <p> ¿Ya tienes una Cuenta? <Link className='btnCambiar' to="/login">Logearme</Link></p>
+     <p> ¿Ya tienes una Cuenta? <Link className='btnCambiar' to="/login">Logeate</Link></p>
      <button onClick={cargar}>Push</button>
      </div>
 
