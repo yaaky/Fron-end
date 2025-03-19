@@ -20,6 +20,48 @@
       "email": "j@gmail.com",
       "password": "1245",
       "tipuser": "user"
+    },
+    {
+      "id": "8ae7",
+      "nombre": "DRN",
+      "email": "drn",
+      "password": "44",
+      "tipuser": "user"
+    },
+    {
+      "id": "99cb",
+      "nombre": "DRN",
+      "email": "drn",
+      "password": "44",
+      "tipuser": "user"
+    },
+    {
+      "id": "8696",
+      "nombre": "DRN",
+      "email": "drn",
+      "password": "44",
+      "tipuser": "user"
+    },
+    {
+      "id": "c068",
+      "nombre": "DRN",
+      "email": "drn",
+      "password": "44",
+      "tipuser": "user"
+    },
+    {
+      "id": "e030",
+      "nombre": "s",
+      "email": "s",
+      "password": "s",
+      "tipuser": "user"
+    },
+    {
+      "id": "2fc6",
+      "nombre": "we",
+      "email": "we",
+      "password": "w",
+      "tipuser": "user"
     }
   ],
   "tasks": []

@@ -8,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function home() {
   return (
     <div>
+      
         
         <div className='cont'>
         <div className='header'>
@@ -55,25 +56,25 @@ function home() {
 
         <div className="contenedor" >
             <div className='itemCard'>
-                <h1>hola</h1>
+                <h1>Asociados</h1>
                 <img src="asociasion.jpg" alt="" />
                 <button>Ver mas</button>
             </div>
 
             <div className='itemCard'>
-                <h1>hola</h1>
-                <img src="asociasion.jpg" alt="" />
+                <h1>empresa</h1>
+                <img src="Cream and Brown Minimalist Coffee Shop Logo.png" alt="" />
                 <button>Ver mas</button>
             </div>
 
             <div className='itemCard'>
-                <h1>hola</h1>
-                <img src="asociasion.jpg" alt="" />
+                <h1>Lugares de cultivo</h1>
+                <img src="img 5.jpg" alt="" />
                 <button>Ver mas</button>
             </div>
 
             <div className='itemCard'>
-                <h1>hola</h1>
+                <h1>transportes</h1>
                 <img src="asociasion.jpg" alt="" />
                 <button>Ver mas</button>
             </div>

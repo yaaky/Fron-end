@@ -1,21 +1,16 @@
 .cont{
-    display: contents;
-    max-width: 70%; 
-    margin: 0 auto;
-
- 
+    border: solid;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 97%;
     margin: auto;
     background-color: darksalmon;
     color:  rgb(82, 40, 10);
     font-style: italic;
     padding: 10px 50px;
-    
+
 }
 
 
@@ -27,8 +22,10 @@
 }
 .menu{
     margin: auto;
-    padding: 10px;
+    padding:10px;
+    height: 60px;
     background-color: darksalmon;
+    
   
 }
 
@@ -39,37 +36,23 @@
     justify-content: space-around;
     width: 70%; 
     font-style: italic;
-    
+    font-weight: bolder;
     
 }
 
 a {
     text-decoration: none;
     color: rgb(65, 30, 4);
+    font-size: larger;
+
 
 }
-/* .contenedor{
-    border: solid red ;
-    display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-    gap: 20px;
-    margin: 30px auto;
-    width: 95%;
-    height: auto;
-    border-radius: 10px;
-    padding: 20px;
-
-} */
-
 .contenedor{
-    width: 95%;
+    width: 98%;
     margin: 30px  auto;
     display: grid;
     grid-template-areas: 'a a a a';
-    /* grid-auto-rows: 20%;
-    grid-auto-columns: 20%; */
-    
+    border: solid red;
     row-gap: 20px;
     column-gap: 20px;
 }
@@ -86,19 +69,31 @@ a {
     background-color: powderblue;
     border-radius: 20px;
    margin: 3px;
+   
 }
 
 
 
 .itemCard {
     height: 300px;
+    
     border-radius: 10px;
     border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:  #efe7dd ;
+    background-color:  #d6a97d15 ;
+    font-family: italic;
+    border: solid lightskyblue; 
+
+}
+.itemCard1 img{
+    border: solid;
+    display:flex;
+   
+    width: 200px;
+    height: 195px;
 
 }
 
@@ -113,24 +108,15 @@ a {
 .itemCard button:hover{
     background-color: skyblue;
     box-shadow: 0 0 15px rgb(16, 125, 209);
+   
 }
-#prueba{
-    display: block;
-    margin: auto;
-    width: 85%;
+
    
 
-}
 
 
 .carousel-item img{
-    height: 600px;
-    
+    height: 500px;
     
 
 } 
-
-.carousel-inner {
-    width: 80%;
-   
-}

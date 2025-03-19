@@ -1,4 +1,122 @@
-
+/* Estilos generales para la página */
 body {
-    background-color: beige;
+  border: solid red;
+  }
+  
+  .cont2 {
+    max-width: 1200x;
+    margin:  auto;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+
+  }
+  
+  .header h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .header img {
+
+  }
+  .imagen-carrusel {
+    
+    width: 50%;
+    margin: 20px auto ;
+    height: 300px;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.imagen {
+    width: 100%
+;
+    max-height: 100%;
+  
+    transition: opacity 1s ease-in-out;
+}
+
+  
+  .menu{
+   
+    
+    margin: auto;
+    padding: 10px;
+    background-color: darksalmon;
+    width: 95%;
+}
+
+.menu ul {
+    margin: auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 70%; 
+    font-style: italic;
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(65, 30, 4);
+
+}
+  .log {
+    background-color: rgb(231, 158, 138);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(239, 163, 130, 0.1);
+  }
+  
+  .log h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+ 
+
+  
+
+  
+  .log button {
+    width: 100%;
+    padding: 12px;
+    background-color: #623434;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  
+  .log button:hover {
+    background-color: #b16565;
+  }
+  
+  /* Estilo para el enlace "Registrate" */
+  .log .btnCambiar {
+    color: #dc2525d5;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  
+  .log .btnCambiar:hover {
+    text-decoration: underline;
+  }
+  
+
+  
