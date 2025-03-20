@@ -83,6 +83,7 @@ import "../styles/registro.css"
         <p> ¿Ya tienes una Cuenta? <Link className='btnCambiar' to="/login">Logeate</Link></p>
         <button onClick={cargar}>Push</button>
       </div>
+      
       </div>
       
 

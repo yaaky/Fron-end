@@ -74,3 +74,49 @@ a {
     color: rgb(65, 30, 4);
 
 }
+.reg {
+    background-color: rgb(231, 158, 138);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(239, 163, 130, 0.1);
+  }
+  
+  .reg h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+ 
+
+  
+
+  
+  .reg button {
+    width: 100%;
+    padding: 12px;
+    background-color: #623434;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  
+  .reg button:hover {
+    background-color: #b16565;
+  }
+  
+  /* Estilo para el enlace "Registrate" */
+  .reg .btnCambiar {
+    color: #dc2525d5;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  
+  .reg .btnCambiar:hover {
+    text-decoration: underline;
+  }
+  

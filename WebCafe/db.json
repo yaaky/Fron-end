@@ -62,6 +62,13 @@
       "email": "we",
       "password": "w",
       "tipuser": "user"
+    },
+    {
+      "id": "c328",
+      "nombre": "j",
+      "email": "j",
+      "password": "j",
+      "tipuser": "user"
     }
   ],
   "tasks": []

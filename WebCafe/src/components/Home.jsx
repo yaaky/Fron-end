@@ -25,13 +25,13 @@ function home() {
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src="/cf2.jpg" className="d-block w-100" alt="Nature" />
+                <img src="/s3.jpg" className="d-block w-100" alt="Nature" />
               </div>
               <div className="carousel-item">
-                <img src="cf3.jpg" className="d-block w-100" alt="Costa Rica" />
+                <img src="s1.jpg" className="d-block w-100" alt="Costa Rica" />
               </div>
               <div className="carousel-item">
-                <img src="cf5.jpg" className="d-block w-100" alt="Costa Rica" />
+                <img src="c0.png" className="d-block w-100" alt="Costa Rica" />
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -45,7 +45,7 @@ function home() {
           </div>
         </div>
 
-            <div className='menu'>
+            <div className='menu1'>
                 <ul >
                     <li><Link to="/inicio">Inicio</Link></li>
                     <li><Link to="/registro">Register</Link></li>
@@ -54,28 +54,28 @@ function home() {
             </div>
         </div>
 
-        <div className="contenedor" >
-            <div className='itemCard'>
+        <div className="contenedor1" >
+            <div className='itemCard1'>
                 <h1>Asociados</h1>
                 <img src="asociasion.jpg" alt="" />
                 <button>Ver mas</button>
             </div>
 
-            <div className='itemCard'>
+            <div className='itemCard1'>
                 <h1>empresa</h1>
                 <img src="Cream and Brown Minimalist Coffee Shop Logo.png" alt="" />
                 <button>Ver mas</button>
             </div>
 
-            <div className='itemCard'>
+            <div className='itemCard1'>
                 <h1>Lugares de cultivo</h1>
-                <img src="img 5.jpg" alt="" />
+                <img src="cc.jpg" alt="" />
                 <button>Ver mas</button>
             </div>
 
-            <div className='itemCard'>
+            <div className='itemCard1'>
                 <h1>transportes</h1>
-                <img src="asociasion.jpg" alt="" />
+                <img src=" img 5.jpg" alt="" />
                 <button>Ver mas</button>
             </div>
         </div>
