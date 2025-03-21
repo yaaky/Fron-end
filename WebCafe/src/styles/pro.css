@@ -1,0 +1,104 @@
+.bod{
+    border: rgb(239, 15, 239);
+}
+.header1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background-color: darksalmon;
+    color:  rgb(82, 40, 10);
+    font-style: italic;
+    padding: 10px 50px;
+   
+
+}
+
+
+
+.header1 img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+/* Reset de márgenes y paddings para asegurar consistencia */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Estilo de cada contenedor de imagen */
+.image-container {
+  text-align: center; /* Centra el texto debajo de la imagen */
+  width: 200px; /* Establece un ancho fijo para las imágenes */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en cada contenedor */
+.image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la imagen dentro del contenedor */
+.image {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  margin: auto;
+  padding: 7px;
+  border: none;
+}
+
+/* Estilo del texto debajo de la imagen */
+.image-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+.menu2{
+    margin: auto;
+    padding:10px;
+    height: 60px;
+    background-color: darksalmon;
+    
+  
+}
+
+.menu2 ul {
+    margin: auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 70%; 
+    font-style: italic;
+    font-weight: bolder;
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(65, 30, 4);
+    font-size: larger;
+
+
+}

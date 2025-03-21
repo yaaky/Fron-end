@@ -8,8 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function home() {
   return (
     <div>
-      
-        
+       
         <div className='cont'>
         <div className='header'>
           <h1>Sabor de Costa Rica</h1>
@@ -64,7 +63,7 @@ function home() {
             <div className='itemCard1'>
                 <h1>empresa</h1>
                 <img src="Cream and Brown Minimalist Coffee Shop Logo.png" alt="" />
-                <button>Ver mas</button>
+                <button><Link to="/Pro" >Ver mas</Link></button>
             </div>
 
             <div className='itemCard1'>

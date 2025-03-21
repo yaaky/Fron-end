@@ -4,6 +4,7 @@ import Products from '../components/Products'
  function Pro() {
   return (
     <div> 
+  
       < Products/>
     </div>
   )
