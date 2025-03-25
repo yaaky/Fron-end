@@ -12,6 +12,14 @@ import 'boxicons'
           <h1>Sabor de Costa Rica</h1>
           <img src="Cream and Brown Minimalist Coffee Shop Logo (1).png" alt="" />
         </div><br/>
+
+        <div className='flech'>
+ <ul className='u'>
+  <li><Link to="/Home" ><box-icon name="rocket"> </box-icon></Link></li>
+
+
+  </ul>
+ </div>
        
   <div class="container">
    
@@ -37,15 +45,8 @@ import 'boxicons'
       <p class="image-text">Texto de la imagen 3</p>
     </div>
   </div><br />
-
- <div className='flech'>
- <ul className='u'>
-  <li><Link to="/Home" ><box-icon name="rocket"> </box-icon></Link></li>
-
-
-  </ul>
+  
  </div>
-      </div>
     </div>
   )
 }

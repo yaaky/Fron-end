@@ -1,6 +1,6 @@
 async function GetProductos() {
     try {
-        const response = await fetch('http://localhost:3000/Productos', {
+        const response = await fetch('http://localhost:3001/Productos', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ async function PostProductos(nombre, prd) {
             categoria:"media"
         };
 
-        const response = await fetch("http://localhost:3000/Productos", {
+        const response = await fetch("http://localhost:3001/Productos", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ async function UpdateProductos(nombre,tarea,estado,id) {
     try {
         const userData = {nombre, prd, categoria };
 
-        const response = await fetch(`http://localhost:3000/Productos/${id}`, {
+        const response = await fetch(`http://localhost:3001/Productos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ async function UpdateProductos(nombre,tarea,estado,id) {
 
 async function DeleteProductos(id) {
     try {
-        const response = await fetch(`http://localhost:3000/Productos/${id}`, {
+        const response = await fetch(`http://localhost:3001/Productos/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
