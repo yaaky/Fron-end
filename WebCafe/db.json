@@ -69,9 +69,22 @@
       "email": "j",
       "password": "j",
       "tipuser": "user"
+    },
+    {
+      "id": "8544",
+      "nombre": "ffff",
+      "email": "ffff",
+      "password": "fffd",
+      "tipuser": "user"
     }
   ],
-  "producto": [
-    
+  "productos": [
+    {
+      "nombre": "Steven",
+      "producto": "sasas",
+      "estado": "pendiente",
+      "categoria": "Alta",
+      "id": "64aa"
+    }
   ]
 }

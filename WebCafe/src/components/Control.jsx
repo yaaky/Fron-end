@@ -1,137 +1,145 @@
-import React, {useEffect, useState, } from 'react'
- import tareas from '../services/productos';
- import Swal from "sweetalert2"
+import React, { useEffect, useState } from 'react';
+import producto from '../services/productos';
+import Swal from "sweetalert2";
 
- 
- function Control() {
-   const [PoductoAgregado,SetPoductoAgregado]=useState()
-   const [TareasT, SetTarea]=useState([])
- 
-   let Usuario = JSON.parse(localStorage.getItem("medio"))  
- 
-   let Text = "";
-   
-   useEffect(()=>{
-     async function fetchDataproductos() {
-         const datos = await tareas.GetProductos()
-         SetTarea(datos)
- 
-     };
-     fetchDataproductos();
- 
-   },[]);
-   
- 
-   function Tarea(evento) {
-     SetPoductoAgregado(evento.target.value)
- 
-   }
- 
- function btnProduct(){
- 
-   if(PoductoAgregado==undefined) {
-     Swal.fire({
-       icon: 'info',
-       title: 'Porfavor, escriba una tarea',
-     });
-   }
- 
-   else {
-     tareas.PostProductos(Usuario,PoductoAgregado)
-     console.log("Tarea enviada correctamente");
-     setTimeout(() => {
-       location.reload()
-     }, 300);
- 
-   }
- }
- 
- function btnEliminar(id) {
-   tareas.DeleteProductos(id)
-   setTimeout(() => {
-     location.reload()
-   }, 300);
- }
- 
- async function btnEditar(tarea,id) {
- 
-   
-   const { value: text } = await Swal.fire({
-     input: "textarea",
-     inputLabel: "Editar tarea",
-     inputValue: tarea,
-     inputAttributes: {
-       "aria-label": "Escribe tu nueva tarea"
-     },
-     showCancelButton: true,
-     confirmButtonText: "Actualizar", 
-     cancelButtonText: "Cancelar" 
-   });
- 
-   if (text) {
-     Swal.fire({
-       icon: 'success',
-       title: 'Tarea actualizada',
-       showConfirmButton: false
-     });
- 
-     let estado = "pendiente"
- 
-     Text = text;
- 
-     tareas.UpdateProductos(Usuario,text,estado,id)
-     setTimeout(() => {
-       location.reload()
-     }, 300);
- 
-   }
- 
- }
- 
- function checkbox(tarea,id){
-   let estado = "completada"
-   tareas.UpdateProductos(Usuario,tarea,estado,id)
-   setTimeout(() => {
-     location.reload()
-   }, 300);
- 
- }
- 
- 
-   return (
-   <main>
-     <div className='nombre'>
-       <p className='User'>Bienvenido, {Usuario} </p>
- 
-     </div>
- 
-     <div className='agtarea'>
-       
-       <label >Agregar Tarea</label><br /><br />
-       <input type="text" value={PoductoAgregado} onChange={Tarea} placeholder='Agreagar una Tarea' /><br /><br />
-       <button onClick={btnProduct}>Push</button>
-     </div>
- 
-     <section className='ContTareas'>
- 
-       {TareasT.filter(TAREA => TAREA.estado == "pendiente").map((TAREA, index) => (
- 
- 
-         <div key={index} className='DIVTarea'>
-           
-           <p className='pNombre' >Nombre: {TAREA.nombre}</p>
-           
-           <p className='pTarea'> Tarea: {TAREA.tarea}</p>
-           <button onClick={e => btnEliminar(TAREA.id)} >Eliminar</button>
-           <button onClick={e => btnEditar(TAREA.tarea,TAREA.id)} >Editar</button>
-           <input type='checkbox' onClick={e => checkbox(TAREA.tarea,TAREA.id)} />
-         </div>
-       ))}
-     </section>
-   </main>
- 
-     
-   )
- }
- 
- export default Control
+function Control() {
+  const [productoAgregado, setProductoAgregado] = useState('');
+  const [productoT, setproducto] = useState([]);
+  const [categoria, setCategoria] = useState(''); // Estado para manejar la selección de categoría
+
+  let usuario = JSON.parse(localStorage.getItem("Usuario"));
+  console.log(usuario);
+
+  useEffect(() => {
+    async function fetchDataProductos() {
+      const datos = await producto.GetProductos();
+      console.log(datos)
+      setproducto(datos);
+
+    }
+    fetchDataProductos();
+  }, []);
+
+  // Maneja el cambio en el campo de producto
+  function handleproductoChange(event) {
+    setProductoAgregado(event.target.value);
+  }
+
+  // Maneja el cambio en la categoría seleccionada
+  function handleCategoriaChange(event) {
+    setCategoria(event.target.value);
+  }
+
+  // Función para agregar un producto
+  async function handleAddProduct() {
+    if (!productoAgregado || !categoria) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Por favor, complete todos los campos',
+      });
+    } else {
+      await producto.PostProductos(usuario, productoAgregado, categoria);
+      console.log("Producto enviado correctamente");
+      setTimeout(() => {
+        location.reload(); // Recarga para mostrar la nueva producto agregada
+      }, 300);
+    }
+  }
+
+  // Función para eliminar una producto
+  function handleDelete(id) {
+    producto.DeleteProductos(id);
+    setTimeout(() => {
+      location.reload(); // Recarga después de eliminar la producto
+    }, 300);
+  }
+
+  // Función para editar una producto
+  async function handleEdit(product, id) {
+    const { value: formValues } = await Swal.fire({
+      title: "Multiple inputs",
+      html: `
+        <input id="nombre" class="swal2-input"/>
+        <select class="swal2-select" name="categoria" id="categoriaEdit">
+          <option value="">categoria del cafe</option>
+          <option value="Alta"> Alta</option>
+          <option value="Media">Media</option>
+          <option value="Baja">Baja</option>
+        </select>
+      `,
+      focusConfirm: false,
+      preConfirm: () => {
+
+        let NombreEdit = document.getElementById("nombre").value
+        let CategoriaEdit = document.getElementById("categoriaEdit").value
+
+        return [
+          NombreEdit,
+          CategoriaEdit
+        ];
+      }
+    });
+    if (formValues) {
+      // Swal.fire(JSON.stringify(formValues));
+      const [NombreEdit, CategoriaEdit] = formValues;
+
+      let estado = "pendiente";
+
+      producto.UpdateProductos(usuario, NombreEdit, estado, CategoriaEdit, id);
+      setTimeout(() => {
+        location.reload();
+      }, 300);
+
+    }
+  }
+
+
+
+  // Función para marcar una producto como completada
+  function handleCheckbox(product, id) {
+    let estado = "completada";
+    producto.UpdateProductos(usuario, product, estado, id);
+    setTimeout(() => {
+      location.reload();
+    }, 300);
+  }
+
+  return (
+    <main>
+      <div className='nombre'>
+        <p className='User'>Bienvenidos, {usuario} </p>
+      </div>
+      <div className='agproducto'>
+        <label>Agregar producto</label><br /><br />
+        {/* Agregar un selector de categoría */}
+        <select value={categoria} onChange={handleCategoriaChange} name="categoria" id="categoria">
+          <option value="">categoria del cafe</option>
+          <option value="Alta"> Alta</option>
+          <option value="Media">Media</option>
+          <option value="Baja">Baja</option>
+        </select><br /><br />
+        <input
+          type="text"
+          value={productoAgregado}
+          onChange={handleproductoChange}
+          placeholder='Agregar una producto'
+        /><br /><br />
+        <button onClick={handleAddProduct}>Agregar</button>
+      </div>
+      <section className='Contproducto'>
+        {productoT.map((producto, index) => (
+          <div key={index} className='DIVproducto'>
+            <p className='pNombre'>Nombre: {producto.nombre}</p>
+            <p className='pproducto'>producto: {producto.producto}</p>
+            <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
+            <button onClick={() => handleEdit(producto.producto, producto.id)}>Editar</button>
+            <input type='checkbox' onClick={() => handleCheckbox(producto.producto, producto.id)} /> Marcar como completada
+          </div>
+        ))}
+      </section>
+    </main>
+  );
+}
+
+export default Control;
+

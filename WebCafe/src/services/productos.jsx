@@ -1,6 +1,6 @@
 async function GetProductos() {
     try {
-        const response = await fetch('http://localhost:3001/Productos', {
+        const response = await fetch('http://localhost:3000/productos', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -8,25 +8,25 @@ async function GetProductos() {
         });
 
         if (!response.ok) {
-            throw new Error('Error fetching Productos');
+            throw new Error('Error fetching productos');
         }
 
         return await response.json();
     } catch (error) {
-        console.error('Error fetching Productos:', error);
+        console.error('Error fetching productos:', error);
         throw error;
     }
 }
 
-async function PostProductos(nombre, prd) {
+async function PostProductos(nombre, producto, categoria) {
     try {
         const userData = { 
             nombre, 
-            prd,
-            categoria:"media"
+            producto,
+            categoria
         };
 
-        const response = await fetch("http://localhost:3001/Productos", {
+        const response = await fetch("http://localhost:3000/productos", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -44,12 +44,11 @@ async function PostProductos(nombre, prd) {
         throw error;
     }
 }
-
-async function UpdateProductos(nombre,tarea,estado,id) {
+async function UpdateProductos(nombre,producto,estado,categoria,id) {
     try {
-        const userData = {nombre, prd, categoria };
+        const userData = {nombre,producto,estado,categoria };
 
-        const response = await fetch(`http://localhost:3001/Productos/${id}`, {
+        const response = await fetch(`http://localhost:3000/productos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -70,7 +69,7 @@ async function UpdateProductos(nombre,tarea,estado,id) {
 
 async function DeleteProductos(id) {
     try {
-        const response = await fetch(`http://localhost:3001/Productos/${id}`, {
+        const response = await fetch(`http://localhost:3000/productos/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
