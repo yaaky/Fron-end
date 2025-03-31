@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import producto from '../services/productos';
 import Swal from "sweetalert2";
+import "../styles/control.css";
 
 function Control() {
   const [productoAgregado, setProductoAgregado] = useState('');

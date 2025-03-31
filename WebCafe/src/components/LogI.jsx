@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import llamados from '../services/llamados';
 import "../styles/login.css";
 
+
 function LogI() {
     const [nombreUsuario, setNombreUsuario] = useState();
     const [passwordUsuario, setPasswordUsuario] = useState();

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/pro.css';
 import 'boxicons';
-import productos from '../services/productos';
+import productos from './productos';
 import Swal from 'sweetalert2';
 
 function Products() {
